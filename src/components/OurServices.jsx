@@ -9,9 +9,8 @@ function OurServices() {
 
     return <>
         <div id="our-services" className="grid-item" >
-            <h1 className="main-heading">Our Services</h1>
+            <h1 className="primary main-heading">Our Services</h1>
             <div className="services-container">
-
                 <div onMouseOver={() => { console.log("mouseOVer")}} onMouseDown={() => {console.log('mouseDown')}} className="services-item">
                     <div>
                         {/* <img src={card} alt="" className="services-icon" /> */}

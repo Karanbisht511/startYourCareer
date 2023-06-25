@@ -31,7 +31,8 @@ function Footer() {
                 </div>
                 <div className="downloadApp border">
                     <h2>DOWNLOAD OUR APPLICATION</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quidem enim</p>
+                    <p className='secondary-two'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quidem enim</p>
+                    <p className='secondary-two'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quidem enim</p>
                     <div className="link-btn">
                         <button className='store-button'>
                             <div> <img src={iconApple} alt="" /></div>
