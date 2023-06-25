@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+.left{
+  position: absolute;
+  width: 663px;
+  height: 1080px;
+  left: 0px;
+  top: 0px;
+  background: #2A46AB;
+}
+
+.girl {
+  position: absolute;
+  width: 746px;
+  height: 1001.97px;
+  left: 100px;
+  top: 68.89px;
+}
