@@ -1,11 +1,11 @@
-import { useState } from "react";
-import yellowCardIcon from ".././images/card_icon.svg";
-import whiteCardIcon from '.././images/white_card_icon.svg';
+// import { useState } from "react";
+// import yellowCardIcon from ".././images/card_icon.svg";
+// import whiteCardIcon from '.././images/white_card_icon.svg';
 
 function OurServices() {
 
-    const [showWhiteIcon, setShowWhiteIcon] = useState(true)
-    const [showYellowIcon,setYellowIcon]=useState(false)
+    // const [showWhiteIcon, setShowWhiteIcon] = useState(true)
+    // const [showYellowIcon,setYellowIcon]=useState(false)
 
     return <>
         <div id="our-services" className="grid-item" >
@@ -23,7 +23,9 @@ function OurServices() {
                     </div>
                 </div>
 
-                <div onMouseOver={() => { setShowWhiteIcon(true) }} onMouseDown={() => { setShowWhiteIcon(false) }} className="services-item" >
+                <div 
+                // onMouseOver={() => { setShowWhiteIcon(true) }} onMouseDown={() => { setShowWhiteIcon(false) }} 
+                className="services-item" >
                     <div>
                         {/* <img src={showWhiteIcon ? whiteCardIcon : card} alt="" className="services-icon" /> */}
                     </div>
@@ -35,7 +37,9 @@ function OurServices() {
                     </div>
                 </div>
 
-                <div onMouseOver={() => { setShowWhiteIcon(true) }} onMouseDown={() => { setShowWhiteIcon(false) }} className="services-item">
+                <div
+                //  onMouseOver={() => { setShowWhiteIcon(true) }} onMouseDown={() => { setShowWhiteIcon(false) }}
+                  className="services-item">
                     <div>
                         {/* <img src={showWhiteIcon ? whiteCardIcon : card} alt="" className="services-icon" /> */}
                     </div>
@@ -47,7 +51,9 @@ function OurServices() {
                     </div>
                 </div>
 
-                <div onMouseOver={() => { setShowWhiteIcon(true) }} onMouseDown={() => { setShowWhiteIcon(false) }} className="services-item">
+                <div
+                //  onMouseOver={() => { setShowWhiteIcon(true) }} onMouseDown={() => { setShowWhiteIcon(false) }}
+                  className="services-item">
                     <div>
                         {/* <img src={showWhiteIcon ? whiteCardIcon : card} alt="" className="services-icon" /> */}
                     </div>
