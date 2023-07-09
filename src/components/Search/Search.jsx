@@ -3,11 +3,16 @@ import data from "../../data/colleges.json"
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeStateName,changeCollegeName } from "../../features/collegeDetails/collegeDetailsSlice";
 
 function Search() {
 
     let [states, setStates] = useState()
     let [colleges, setColleges] = useState()
+
+    let dispatch = useDispatch()
 
     function getStates(text) {
         let firstChar = text.at(0)
@@ -67,21 +72,16 @@ function Search() {
         return colleges
     }
 
-    // getColleges("Karnataka")
-
     function handleStatesChange(e) {
-        let states = e.target.value;
+        let value = e.target.value;
         // console.log(locationToSearch.length);
-        if (states == '') {
+        if (value == '') {
             setStates(false)
         }
-        else {
-            setStates(getStates(states))
-            // getStates(states).then(
-            //     (response) => {
-            //         setSdd(response)
-            //     }
-            // )
+        else{
+            setStates(getStates(value)) 
+            // console.log(changeStateName);   
+            dispatch(changeStateName(states))
         }
     }
 
@@ -92,7 +92,8 @@ function Search() {
         } else {
             let state = document.getElementById('states').value
             setColleges(getColleges(state, college))
-            // console.log();
+            // console.log(changeCollegeName);  
+            dispatch(changeCollegeName(colleges))
         }
     }
 
@@ -129,7 +130,7 @@ function Search() {
                         }
                     </datalist>
                     <input autoComplete="on" list="college-dropdown" onChange={handleCollegesChange} type="search" name="" id="colleges" placeholder="Search colleges/courses" />
-                    <SearchIcon className="search-page-icon" />
+                    <Link to="/college"><SearchIcon className="search-page-icon" /></Link>
                 </div>
             </div>
         </div>

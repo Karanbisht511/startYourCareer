@@ -1,20 +1,117 @@
 * {
   box-sizing: border-box;
+  margin: 0px;
 }
 
-.left{
-  position: absolute;
-  width: 663px;
-  height: 1080px;
-  left: 0px;
-  top: 0px;
-  background: #2A46AB;
+.signup-primary {
+  font-size: 50px;
 }
 
-.girl {
-  position: absolute;
-  width: 746px;
-  height: 1001.97px;
-  left: 100px;
-  top: 68.89px;
+.signup-secondary {
+  font-size: 30px;
+}
+
+#left {
+  grid-area: left;
+  color: white;
+  background-color: rgb(64, 64, 165);
+  text-align: left;
+  padding: 10px;
+}
+
+#left .brand-txt {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  top: 190px;
+}
+
+#right {
+  grid-area: right;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 36vw 60vw;
+  grid-template-rows: 100%;
+  grid-template-areas: "left right";
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-wrapper img {
+  width: 175%;
+  /* height: 70%; */
+}
+
+.fontTitle {
+  grid-area: fontTitle;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.signup-thirdParty {
+  grid-area: thirdParty;
+  display: flex;
+  justify-content: space-around;
+  height: 70%;
+}
+
+.input-email {
+  grid-area: email;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.input-password {
+  grid-area: password;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.terms-conditions {
+  grid-area: tc;
+}
+
+.btn-signup-wrapper {
+  grid-area: signupBtn;
+}
+
+.haveAccount {
+  grid-area: haveAccount;
+  text-align: left;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 40%;
+  grid-template-rows: repeat(6, 80px);
+  grid-template-areas:
+    "fontTitle"
+    "thirdParty"
+    "email"
+    "password"
+    "tc"
+    "signupBtn"
+    "haveAccount";
+  row-gap: 20px;
+  height: 100%;
+  margin: auto;
+  place-content: center;
+}
+
+.inputCredential {
+  width: 100%;
+  height: 60%;
+  background-color: rgb(164, 143, 143);
+}
+
+#btn-signup {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
 }
